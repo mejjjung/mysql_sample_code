@@ -88,3 +88,8 @@ SELECT * FROM titles;
 SELECT * FROM salaries;
 SELECT * FROM departments;
 SELECT * FROM dept_emp;
+
+use shopdb;
+SELECT * From blog;
+SELECT * From user;
+SELECT * FROM reply;

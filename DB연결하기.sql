@@ -56,3 +56,9 @@ WHERE u.user_name = '김미정';
 SELECT * FROM user;
 INSERT INTO user(user_id, user_name)
 VALUES (5, '흰둥이');
+
+SELECT *
+FROM user AS u
+JOIN blog AS b
+ON u.user_id = b.user_id
+WHERE u.user_id = 1;
