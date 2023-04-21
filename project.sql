@@ -1,18 +1,20 @@
 CREATE DATABASE myshop;
 use myshop;
+SELECT * FROM user;
 
-DROP TABLE user;
+CREATE TABLE user;
+
 CREATE TABLE user(
 	Id INT PRIMARY KEY AUTO_INCREMENT,
-    userId VARCHAR(100) NOT NULL,
-    Name VARCHAR(50) NOT NULL,
-    password  NOT NULL,
+    username VARCHAR(100) NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    Phone VARCHAR(100) NOT NULL,
-    Address VARCHAR(300) NOT NULL
+    phone VARCHAR(100) NOT NULL,
+    address VARCHAR(300) NOT NULL
 );
 
-INSERT INTO user(Id,userId, Name, password, email,phone,Address)
+INSERT INTO user(Id,username, name, password, email,phone,address)
 VALUES 
 	(1,'jjungme','김미정',0525,'alwjd@naver.com','010-3307-2546','부산시 사하구'),
 	(2,'jjanguu' ,'신짱구',1234,'jjangu@naver.com','010-1111-2222','서울시 떡잎마을'),
@@ -23,7 +25,7 @@ VALUES
 SELECT * FROM user
 WHERE userId = ? AND password = ? ;
 
-INSERT INTO user(Id,userId, Name, password, email,phone,Address)
+INSERT INTO user(Id,username, name, password, email,phone,address)
 VALUES (7,'hyoring', '김효린',0929,'hyoring@naver.com','010-2265-8611','부산시 해운댕'),
 		(8,'jingjing', '손주이',0806,'jingjing@naver.com','010-6812-3812','부산시 사상구');
 SELECT * FROM user
